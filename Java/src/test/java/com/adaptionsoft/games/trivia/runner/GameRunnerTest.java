@@ -13,7 +13,7 @@ import org.junit.Test;
 @UseReporter(value = { KDiff3Reporter.class, QuietReporter.class })
 public class GameRunnerTest {
 
-    private static final int NUM_TESTS = 1000;
+    private static final int NUM_TESTS = 25;
     
     @Rule
     public CaptureSystemOut stdOut = new CaptureSystemOut();
