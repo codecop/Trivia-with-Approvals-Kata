@@ -1,4 +1,4 @@
-package com.adaptionsoft.games.trivia;
+package sample;
 
 import java.util.Arrays;
 
