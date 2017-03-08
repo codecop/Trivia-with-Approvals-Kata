@@ -44,10 +44,10 @@
                 <version>1.1.11</version>
                 <configuration>
                     <targetClasses>
-                        <param>com.adaptionsoft.games.uglytrivia.*</param>
+                        <param>com.adaptionsoft.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>com.adaptionsoft.games.uglytrivia.*</param>
+                        <param>com.adaptionsoft.*</param>
                     </targetTests>
                     <threads>2</threads>
                 </configuration>
