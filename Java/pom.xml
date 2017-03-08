@@ -20,6 +20,13 @@
             <version>2.7.14</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.approvaltests</groupId>
+            <artifactId>ApprovalTests</artifactId>
+            <version>0.17</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ApprovalTests.017/ApprovalTests.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <properties>
