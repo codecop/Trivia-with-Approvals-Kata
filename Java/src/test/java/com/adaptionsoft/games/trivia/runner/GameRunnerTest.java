@@ -7,6 +7,7 @@ import org.approvaltests.Approvals;
 import org.approvaltests.reporters.QuietReporter;
 import org.approvaltests.reporters.UseReporter;
 import org.approvaltests.reporters.macosx.KDiff3Reporter;
+import org.codecop.junit.CaptureSystemOut;
 import org.junit.Rule;
 import org.junit.Test;
 

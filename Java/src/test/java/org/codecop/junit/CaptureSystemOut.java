@@ -1,4 +1,4 @@
-package com.adaptionsoft.games.trivia.runner;
+package org.codecop.junit;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
