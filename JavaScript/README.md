@@ -1,12 +1,9 @@
-Test with node.js
-=====================
+# Ugly Trivia with Approvals Kata #
 
-Install the jasmine-node plugin from https://github.com/mhevery/jasmine-node
+* See [Trivia code base](https://github.com/caradojo/trivia).
+* Run the Javascript tests using [Node.js](https://nodejs.org/en/).
+* Create unit tests with [Jasmine](https://jasmine.github.io/).
+  * use jasmine-node plugin. Any test source matching the pattern *.spec.js will be executed.
 
-	npm install jasmine-node -g
-
-And execute:
-
-	jasmine-node .
-
-Any test source matching the pattern *.spec.js will be executed.
+### License ###
+GNU License, see `LICENSE.txt` in repository.
