@@ -1,4 +1,4 @@
-require('./game.js');
+require('../src/game.js');
 
 describe("The test environment", function() {
   it("should pass", function() {

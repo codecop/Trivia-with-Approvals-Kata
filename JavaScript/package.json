@@ -1,0 +1,13 @@
+{
+  "name": "uglytrivia",
+  "description": "Legacy Code Retreat",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-node": "1.14.5",
+    "chai": "3.5.0"
+  },
+  "scripts": {
+    "test": "jasmine-node test"
+  }
+}

@@ -1,0 +1,12 @@
+syntax: glob
+
+node_modules/
+npm-debug.log
+
+.project
+.settings
+.classpath
+
+.idea
+*.iml
+*.iwr
