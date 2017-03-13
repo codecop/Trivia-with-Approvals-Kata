@@ -6,7 +6,7 @@
     * Use `jasmine-node` plugin. Any test source matching the pattern `*.spec.js` will be executed.
     * `jasmine-node` uses jasmine 1.3.1 internally.
 * See [ApprovalTests](https://github.com/approvals/Approvals.NodeJS).
-    * Need version 1.3.0 to have support for Jasmine.
+    * Need version 1.3.0 to have support for Jasmine 1.3.
 
 ### License ###
 GNU License, see `LICENSE.txt` in repository.
