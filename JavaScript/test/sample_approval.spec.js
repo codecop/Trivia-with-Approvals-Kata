@@ -2,7 +2,7 @@
 'use strict';
 
 require('approvals').jasmine();
-var KDiff3Reporter = require('../approvals/Reporters/kdiff3Reporter.js');
+var KDiff3Reporter = require('./approvals/Reporters/kdiff3Reporter.js');
 
 describe("sample array", function() {
 
