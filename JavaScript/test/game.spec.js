@@ -1,3 +1,4 @@
+/* globals describe, it, expect */
 require('../src/game.js');
 
 describe("The test environment", function() {

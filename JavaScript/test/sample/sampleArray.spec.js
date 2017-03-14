@@ -1,3 +1,4 @@
+/* globals describe, it */
 'use strict';
 
 require('approvals').jasmine();

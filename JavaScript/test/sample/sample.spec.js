@@ -1,3 +1,4 @@
+/* globals describe, it, expect */
 'use strict';
 
 describe("A suite is just a function", function() {
@@ -25,8 +26,9 @@ describe("The 'toBe' matcher compares with ===", function() {
 describe("Included matchers:", function() {
 
   it("The 'toBe' matcher compares with ===", function() {
-    var a = 12;
-    var b = a;
+    var a, b;
+    a = 12;
+    b = a;
 
     expect(a).toBe(b);
     expect(a).not.toBe(null);
@@ -40,11 +42,12 @@ describe("Included matchers:", function() {
     });
 
     it("should work for objects", function() {
-      var foo = {
+      var foo, bar;
+      foo = {
         a: 12,
         b: 34
       };
-      var bar = {
+      bar = {
         a: 12,
         b: 34
       };
@@ -79,8 +82,9 @@ describe("Included matchers:", function() {
   });
 
   it("The 'toBeNull' matcher compares against null", function() {
-    var a = null;
-    var foo = 'foo';
+    var a, foo;
+    a = null;
+    foo = 'foo';
 
     expect(null).toBeNull();
     expect(a).toBeNull();
