@@ -31,6 +31,7 @@
     </dependencies>
 
     <build>
+        <finalName>UglyTriviaApprovalsJava</finalName>
         <plugins>
             <plugin>
                 <!-- to check conventional coverage if we like -->
@@ -52,6 +53,23 @@
                     </targetTests>
                     <threads>2</threads>
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-participant-zip</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/assembly/for-participants.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
