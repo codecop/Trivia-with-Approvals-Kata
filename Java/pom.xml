@@ -58,14 +58,14 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>create-participant-zip</id>
+                        <id>create-setup-zip</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
                         <configuration>
                             <descriptors>
-                                <descriptor>src/assembly/for-participants.xml</descriptor>
+                                <descriptor>src/assembly/setup.xml</descriptor>
                             </descriptors>
                         </configuration>
                     </execution>
