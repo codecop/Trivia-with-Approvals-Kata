@@ -1,1 +1,1 @@
-./node_modules/.bin/jasmine-node test
+@call node_modules\.bin\jasmine-node test
