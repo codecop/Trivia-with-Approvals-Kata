@@ -13,21 +13,16 @@ public class AnswerQuestion {
         purses[currentPlayer]++;
         System.out.println(name + " now has " + purses[currentPlayer] + " Gold Coins.");
 
-        boolean winner = didPlayerWin(currentPlayer);
-        return winner;
+        return didPlayerNotWin(currentPlayer);
     }
 
     public boolean corrent(String name, int currentPlayer) {
-        System.out.println("Answer was correct!!!!");
-        purses[currentPlayer]++;
-        System.out.println(name + " now has " + purses[currentPlayer] + " Gold Coins.");
-
-        boolean winner = didPlayerWin(currentPlayer);
-        return winner;
+        return correct(name, currentPlayer);
     }
 
-    private boolean didPlayerWin(int currentPlayer) {
-        return !(purses[currentPlayer] == 6);
+    private boolean didPlayerNotWin(int currentPlayer) {
+        boolean didPlayerWin = purses[currentPlayer] == 6;
+        return !didPlayerWin;
     }
 
     // TODO move wrong answer here as well.
