@@ -2,14 +2,18 @@ package com.adaptionsoft.games.uglytrivia;
 
 public class MovePlayerOnBoard {
 
-    private int[] places = new int[6];
+    private final int[] board;
+
+    public MovePlayerOnBoard(int numberOfPlayers) {
+        board = new int[numberOfPlayers];
+    }
 
     public String move(int roll, int currentPlayer, String name) {
-        places[currentPlayer] = places[currentPlayer] + roll;
-        if (places[currentPlayer] > 11)
-            places[currentPlayer] = places[currentPlayer] - 12;
+        board[currentPlayer] = board[currentPlayer] + roll;
+        if (board[currentPlayer] > 11)
+            board[currentPlayer] = board[currentPlayer] - 12;
 
-        System.out.println(name + "'s new location is " + places[currentPlayer]);
+        System.out.println(name + "'s new location is " + board[currentPlayer]);
 
         String currentCategory = currentCategory(currentPlayer);
         System.out.println("The category is " + currentCategory);
@@ -17,23 +21,23 @@ public class MovePlayerOnBoard {
     }
 
     private String currentCategory(int currentPlayer) {
-        if (places[currentPlayer] == 0)
+        if (board[currentPlayer] == 0)
             return "Pop";
-        if (places[currentPlayer] == 4)
+        if (board[currentPlayer] == 4)
             return "Pop";
-        if (places[currentPlayer] == 8)
+        if (board[currentPlayer] == 8)
             return "Pop";
-        if (places[currentPlayer] == 1)
+        if (board[currentPlayer] == 1)
             return "Science";
-        if (places[currentPlayer] == 5)
+        if (board[currentPlayer] == 5)
             return "Science";
-        if (places[currentPlayer] == 9)
+        if (board[currentPlayer] == 9)
             return "Science";
-        if (places[currentPlayer] == 2)
+        if (board[currentPlayer] == 2)
             return "Sports";
-        if (places[currentPlayer] == 6)
+        if (board[currentPlayer] == 6)
             return "Sports";
-        if (places[currentPlayer] == 10)
+        if (board[currentPlayer] == 10)
             return "Sports";
         return "Rock";
     }
