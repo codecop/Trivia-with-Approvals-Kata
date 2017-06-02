@@ -1,11 +1,10 @@
 package com.adaptionsoft.games.uglytrivia;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class Game {
     Ask ask = new Ask();
-    MovePlayerOnBoard move = new MovePlayerOnBoard();
+    MovePlayerOnBoard move = new MovePlayerOnBoard(6);
 
     ArrayList players = new ArrayList();
     int[] purses  = new int[6];
@@ -45,7 +44,7 @@ public class Game {
 				
 				System.out.println(players.get(currentPlayer) + " is getting out of the penalty box");
 		        String name = (String) players.get(currentPlayer);
-				String currentCategory = move.move(roll, currentPlayer, name);
+				String currentCategory = move.move(name, currentPlayer, roll);
 				ask.askQuestionFor(currentCategory);
 			} else {
 				System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
@@ -55,7 +54,7 @@ public class Game {
 		} else {
 		
             String name = (String) players.get(currentPlayer);
-			String currentCategory = move.move(roll, currentPlayer, name);
+			String currentCategory = move.move(name, currentPlayer, roll);
 			ask.askQuestionFor(currentCategory);
 		}
 		

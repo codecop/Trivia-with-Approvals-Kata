@@ -2,18 +2,18 @@ package com.adaptionsoft.games.uglytrivia;
 
 public class MovePlayerOnBoard {
 
-    private final int[] board;
+    private final int[] playerPositions;
 
     public MovePlayerOnBoard(int numberOfPlayers) {
-        board = new int[numberOfPlayers];
+        playerPositions = new int[numberOfPlayers];
     }
 
-    public String move(int roll, int currentPlayer, String name) {
-        board[currentPlayer] = board[currentPlayer] + roll;
-        if (board[currentPlayer] > 11)
-            board[currentPlayer] = board[currentPlayer] - 12;
+    public String move(String playerName, int currentPlayer, int byPlaces) {
+        playerPositions[currentPlayer] = playerPositions[currentPlayer] + byPlaces;
+        if (playerPositions[currentPlayer] > 11)
+            playerPositions[currentPlayer] = playerPositions[currentPlayer] - 12;
 
-        System.out.println(name + "'s new location is " + board[currentPlayer]);
+        System.out.println(playerName + "'s new location is " + playerPositions[currentPlayer]);
 
         String currentCategory = currentCategory(currentPlayer);
         System.out.println("The category is " + currentCategory);
@@ -21,23 +21,23 @@ public class MovePlayerOnBoard {
     }
 
     private String currentCategory(int currentPlayer) {
-        if (board[currentPlayer] == 0)
+        if (playerPositions[currentPlayer] == 0)
             return "Pop";
-        if (board[currentPlayer] == 4)
+        if (playerPositions[currentPlayer] == 4)
             return "Pop";
-        if (board[currentPlayer] == 8)
+        if (playerPositions[currentPlayer] == 8)
             return "Pop";
-        if (board[currentPlayer] == 1)
+        if (playerPositions[currentPlayer] == 1)
             return "Science";
-        if (board[currentPlayer] == 5)
+        if (playerPositions[currentPlayer] == 5)
             return "Science";
-        if (board[currentPlayer] == 9)
+        if (playerPositions[currentPlayer] == 9)
             return "Science";
-        if (board[currentPlayer] == 2)
+        if (playerPositions[currentPlayer] == 2)
             return "Sports";
-        if (board[currentPlayer] == 6)
+        if (playerPositions[currentPlayer] == 6)
             return "Sports";
-        if (board[currentPlayer] == 10)
+        if (playerPositions[currentPlayer] == 10)
             return "Sports";
         return "Rock";
     }
