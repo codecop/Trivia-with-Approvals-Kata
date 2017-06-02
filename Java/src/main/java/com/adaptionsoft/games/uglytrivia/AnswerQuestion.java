@@ -11,23 +11,17 @@ public class AnswerQuestion {
     public boolean correct(String name, int currentPlayer) {
         System.out.println("Answer was correct!!!!");
         purses[currentPlayer]++;
-        System.out.println(name
-                + " now has "
-                + purses[currentPlayer]
-                + " Gold Coins.");
-        
+        System.out.println(name + " now has " + purses[currentPlayer] + " Gold Coins.");
+
         boolean winner = didPlayerWin(currentPlayer);
         return winner;
     }
-    
+
     public boolean corrent(String name, int currentPlayer) {
-        System.out.println("Answer was corrent!!!!");
+        System.out.println("Answer was correct!!!!");
         purses[currentPlayer]++;
-        System.out.println(name 
-                + " now has "
-                + purses[currentPlayer]
-                + " Gold Coins.");
-        
+        System.out.println(name + " now has " + purses[currentPlayer] + " Gold Coins.");
+
         boolean winner = didPlayerWin(currentPlayer);
         return winner;
     }
@@ -36,4 +30,5 @@ public class AnswerQuestion {
         return !(purses[currentPlayer] == 6);
     }
 
+    // TODO move wrong answer here as well.
 }
