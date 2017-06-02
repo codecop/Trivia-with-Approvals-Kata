@@ -14,13 +14,11 @@ There is a [discussion how to meet the constraint](http://coderetreat.org/group/
 
 ### Thoughts
 * Peter has worked with the constraint in Coderetreats but not sure enough to facilitate it.
-
     * Problems explaining it.
     * Not sure about the learning goal.
   
 * When doing functional programming this is natural. All activities are verbs (functions).
 * What is a good exercise to apply that constraint?
-
     * Not algorithmic because an algorithm is mainly functional and that suits the constraint.
     * Must have some state and mutate that.
     * What about refactoring towards the constraint?
@@ -28,13 +26,11 @@ There is a [discussion how to meet the constraint](http://coderetreat.org/group/
 ## Retrospective
 
 * Ask
-
     * By accident we extracted a reasonable class.
     * Maybe better name would be Questions or QuestionsDeck.
     * It is a closure over the question lists.
 
 * Move
-
     * Notice inconsistent naming of class vs. method name.
     * We only have class with one method - how is name meaningful.
     * This is the board. Can we escape our mental image of Objects as state?
