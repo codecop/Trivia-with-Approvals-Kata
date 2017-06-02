@@ -9,10 +9,7 @@ public class MovePlayerOnBoard {
     }
 
     public String move(String playerName, int currentPlayer, int byPlaces) {
-        playerPositions[currentPlayer] = playerPositions[currentPlayer] + byPlaces;
-        if (playerPositions[currentPlayer] > 11)
-            playerPositions[currentPlayer] = playerPositions[currentPlayer] - 12;
-
+        move(currentPlayer, byPlaces);
         System.out.println(playerName + "'s new location is " + playerPositions[currentPlayer]);
 
         String currentCategory = currentCategory(currentPlayer);
@@ -20,25 +17,41 @@ public class MovePlayerOnBoard {
         return currentCategory;
     }
 
+    private void move(int currentPlayer, int byPlaces) {
+        playerPositions[currentPlayer] = playerPositions[currentPlayer] + byPlaces;
+        if (playerPositions[currentPlayer] > 11) {
+            playerPositions[currentPlayer] = playerPositions[currentPlayer] - 12;
+        }
+    }
+
     private String currentCategory(int currentPlayer) {
-        if (playerPositions[currentPlayer] == 0)
+        if (playerPositions[currentPlayer] == 0) {
             return "Pop";
-        if (playerPositions[currentPlayer] == 4)
+        }
+        if (playerPositions[currentPlayer] == 4) {
             return "Pop";
-        if (playerPositions[currentPlayer] == 8)
+        }
+        if (playerPositions[currentPlayer] == 8) {
             return "Pop";
-        if (playerPositions[currentPlayer] == 1)
+        }
+        if (playerPositions[currentPlayer] == 1) {
             return "Science";
-        if (playerPositions[currentPlayer] == 5)
+        }
+        if (playerPositions[currentPlayer] == 5) {
             return "Science";
-        if (playerPositions[currentPlayer] == 9)
+        }
+        if (playerPositions[currentPlayer] == 9) {
             return "Science";
-        if (playerPositions[currentPlayer] == 2)
+        }
+        if (playerPositions[currentPlayer] == 2) {
             return "Sports";
-        if (playerPositions[currentPlayer] == 6)
+        }
+        if (playerPositions[currentPlayer] == 6) {
             return "Sports";
-        if (playerPositions[currentPlayer] == 10)
+        }
+        if (playerPositions[currentPlayer] == 10) {
             return "Sports";
+        }
         return "Rock";
     }
 
