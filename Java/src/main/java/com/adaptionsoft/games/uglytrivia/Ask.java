@@ -22,7 +22,7 @@ public class Ask {
         return "Rock Question " + index;
     }
 
-    public void ask(String currentCategory) {
+    public void askQuestionFor(String currentCategory) {
         if (currentCategory == "Pop")
             System.out.println(popQuestions.removeFirst());
         if (currentCategory == "Science")
@@ -34,3 +34,9 @@ public class Ask {
     }
 
 }
+
+/*
+ * By accident we extracted a reasonable class.
+ * Maybe better name would be Questions or QuestionsDeck.
+ * It is a closure over the question lists.
+ */

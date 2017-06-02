@@ -74,7 +74,7 @@ public class Game {
 
 	private void askQuestion() {
 		String currentCategory = currentCategory();
-        ask.ask(currentCategory);		
+        ask.askQuestionFor(currentCategory);		
 	}
 
 	private String currentCategory() {
