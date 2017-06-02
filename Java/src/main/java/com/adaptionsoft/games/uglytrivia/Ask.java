@@ -4,33 +4,39 @@ import java.util.LinkedList;
 
 public class Ask {
 
-    private LinkedList popQuestions = new LinkedList();
-    private LinkedList scienceQuestions = new LinkedList();
-    private LinkedList sportsQuestions = new LinkedList();
-    private LinkedList rockQuestions = new LinkedList();
+    private final LinkedList<String> popQuestions = new LinkedList<>();
+    private final LinkedList<String> scienceQuestions = new LinkedList<>();
+    private final LinkedList<String> sportsQuestions = new LinkedList<>();
+    private final LinkedList<String> rockQuestions = new LinkedList<>();
 
     public Ask() {
-        for (int i = 0; i < 50; i++) {
+        createQuestions(50);
+    }
+
+    private void createQuestions(int numberOfQuestion) {
+        for (int i = 0; i < numberOfQuestion; i++) {
             popQuestions.addLast("Pop Question " + i);
-            scienceQuestions.addLast(("Science Question " + i));
-            sportsQuestions.addLast(("Sports Question " + i));
-            rockQuestions.addLast(createRockQuestion(i));
+            scienceQuestions.addLast("Science Question " + i);
+            sportsQuestions.addLast("Sports Question " + i);
+            rockQuestions.addLast("Rock Question " + i);
         }
     }
 
-    private String createRockQuestion(int index) {
-        return "Rock Question " + index;
-    }
-
     public void askQuestionFor(String currentCategory) {
-        if (currentCategory == "Pop")
-            System.out.println(popQuestions.removeFirst());
-        if (currentCategory == "Science")
-            System.out.println(scienceQuestions.removeFirst());
-        if (currentCategory == "Sports")
-            System.out.println(sportsQuestions.removeFirst());
-        if (currentCategory == "Rock")
-            System.out.println(rockQuestions.removeFirst());
+        String question = "";
+        if (currentCategory == "Pop") {
+            question = popQuestions.removeFirst();
+        }
+        if (currentCategory == "Science") {
+            question = scienceQuestions.removeFirst();
+        }
+        if (currentCategory == "Sports") {
+            question = sportsQuestions.removeFirst();
+        }
+        if (currentCategory == "Rock") {
+            question = rockQuestions.removeFirst();
+        }
+        System.out.println(question);
     }
 
 }
