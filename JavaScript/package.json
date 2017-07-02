@@ -6,7 +6,9 @@
     "type": "hg",
     "url": "https://bitbucket.org/pkofler/ugly-trivia-with-approvals-js-setup"
   },
+  "author": "Peter 'Code Cop' Kofler",
   "license": "GPL-3.0",
+  "readmeFilename": "README.md"
   "dependencies": {},
   "devDependencies": {
     "jasmine-node": "1.14.5",
