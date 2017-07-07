@@ -21,7 +21,12 @@ public class AnswerQuestion {
         return !didPlayerWin;
     }
 
-    // TODO move wrong answer here as well.
+    boolean wrong(String name, int currentPlayer) {
+        System.out.println("Question was incorrectly answered");
+        System.out.println(name+ " was sent to the penalty box");
+        return didPlayerNotWin(currentPlayer);
+    }
+
     // TODO comment on this class
     
 }

@@ -81,16 +81,16 @@ public class Game {
 	}
 
 	public boolean wrongAnswer(){
+		inPenaltyBox[currentPlayer] = true;
+
 	    String name = players.get(currentPlayer);
 
-	    System.out.println("Question was incorrectly answered");
-        System.out.println(name+ " was sent to the penalty box");
-		inPenaltyBox[currentPlayer] = true;
-		
+        boolean didPlayerNotWin = answer.wrong(name, currentPlayer);
+
 		currentPlayer++;
 		if (currentPlayer == players.size()) currentPlayer = 0;
-		
-		return true;
+
+        return didPlayerNotWin;
 	}
 
 }
