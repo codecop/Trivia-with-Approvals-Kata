@@ -58,22 +58,22 @@ public class Game {
 	}
 
 	public boolean wasCorrectlyAnswered() {
-	    boolean winner = true;
+	    final boolean didPlayerNotWin;
         if (!inPenaltyBox[currentPlayer] || isGettingOutOfPenaltyBox){
 			    String name = players.get(currentPlayer);
-				winner = answer.correct(name, currentPlayer);
+				didPlayerNotWin = answer.correct(name, currentPlayer);
 
-		}
+		} else {
+            didPlayerNotWin = true;
+        }
 
         currentPlayer++;
         if (currentPlayer == players.size()) currentPlayer = 0;
 
-        return winner;
+        return didPlayerNotWin;
 	}
 
 	public boolean wrongAnswer(){
-
-
 	    String name = players.get(currentPlayer);
         boolean didPlayerNotWin = answer.wrong(name, currentPlayer);
 
