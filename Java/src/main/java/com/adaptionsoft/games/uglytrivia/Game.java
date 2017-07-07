@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Game {
     final MovePlayerOnBoard move = new MovePlayerOnBoard(6);
     final Ask ask = new Ask();
-    final Score answer = new Score(6);
+    final Score score = new Score(6);
 
     ArrayList<String> players = new ArrayList<>();
     boolean[] inPenaltyBox  = new boolean[6];
@@ -61,27 +61,29 @@ public class Game {
 	    final boolean didPlayerNotWin;
         if (!inPenaltyBox[currentPlayer] || isGettingOutOfPenaltyBox){
             String name = players.get(currentPlayer);
-            didPlayerNotWin = answer.correct(name, currentPlayer);
+            didPlayerNotWin = score.correctAnswer(name, currentPlayer);
 
 		} else {
             didPlayerNotWin = true;
         }
 
-        currentPlayer++;
-        if (currentPlayer == players.size()) currentPlayer = 0;
+        changePlayer();
 
         return didPlayerNotWin;
 	}
 
-	public boolean wrongAnswer(){
+    private void changePlayer() {
+	    currentPlayer = (currentPlayer + 1) % players.size();
+    }
+
+    public boolean wrongAnswer(){
 	    String name = players.get(currentPlayer);
-        boolean didPlayerNotWin = answer.wrong(name, currentPlayer);
+        boolean didPlayerNotWin = score.wrongAnswer(name, currentPlayer);
 
         inPenaltyBox[currentPlayer] = true;
         System.out.println(name+ " was sent to the penalty box");
 
-		currentPlayer++;
-		if (currentPlayer == players.size()) currentPlayer = 0;
+        changePlayer();
 
         return didPlayerNotWin;
 	}
