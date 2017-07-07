@@ -6,9 +6,9 @@ public class Game {
     final MovePlayerOnBoard move = new MovePlayerOnBoard(6);
     final Ask ask = new Ask();
     final Score score = new Score(6);
+    final AllowToPlay allow = new AllowToPlay(6);
 
     ArrayList<String> players = new ArrayList<>();
-    boolean[] inPenaltyBox = new boolean[6];
 
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
@@ -29,33 +29,16 @@ public class Game {
         return players.size();
     }
 
-
     public void moveAndAsk(int roll) {
-        boolean isLucky = roll % 2 != 0;
-        Runnable doSomething = () -> askQuestionOfDestinationPlace(roll);
-
-        System.out.println(players.get(currentPlayer) + " is the current player");
+        String name = players.get(currentPlayer);
+        System.out.println(name + " is the current player");
         System.out.println("They have rolled a " + roll);
 
         // we should use a three state enum here really
-        // this is another verb
-        isGettingOutOfPenaltyBox = allowToPlay(players.get(currentPlayer), isLucky, doSomething);
+        boolean isLucky = roll % 2 != 0;
+        isGettingOutOfPenaltyBox = allow.isAllowed(name, currentPlayer, isLucky);
         if (isGettingOutOfPenaltyBox) {
-            doSomething.run();
-        }
-
-    }
-
-    private boolean allowToPlay(String name, boolean isLucky, Runnable doSomething) {
-        if (!inPenaltyBox[currentPlayer]) {
-            return true;
-
-        } else if (isLucky) {
-            System.out.println(name + " is getting out of the penalty box");
-            return true;
-        } else {
-            System.out.println(name + " is not getting out of the penalty box");
-            return false;
+            askQuestionOfDestinationPlace(roll);
         }
     }
 
@@ -67,10 +50,11 @@ public class Game {
 
     public boolean wasCorrectlyAnswered() {
         final boolean didPlayerNotWin;
-        if (canAnswerQuestion()) {
+
+        boolean canAnswerQuestion = !allow.isDenied(currentPlayer) || isGettingOutOfPenaltyBox;
+        if (canAnswerQuestion) {
             String name = players.get(currentPlayer);
             didPlayerNotWin = score.correctAnswer(name, currentPlayer);
-
         } else {
             didPlayerNotWin = true;
         }
@@ -80,20 +64,17 @@ public class Game {
         return didPlayerNotWin;
     }
 
-    private boolean canAnswerQuestion() {
-        return !inPenaltyBox[currentPlayer] || isGettingOutOfPenaltyBox;
-    }
-
     private void changePlayer() {
         currentPlayer = (currentPlayer + 1) % players.size();
     }
 
     public boolean wrongAnswer() {
-        String name = players.get(currentPlayer);
-        boolean didPlayerNotWin = score.wrongAnswer(name, currentPlayer);
+        final boolean didPlayerNotWin;
 
-        inPenaltyBox[currentPlayer] = true;
-        System.out.println(name + " was sent to the penalty box");
+        String name = players.get(currentPlayer);
+        didPlayerNotWin = score.wrongAnswer(name, currentPlayer);
+
+        allow.deny(name, currentPlayer);
 
         changePlayer();
 
