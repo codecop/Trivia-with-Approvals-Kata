@@ -5,8 +5,7 @@ public class Score {
     private final int[] purses;
 
     /*
-     * this constructor should disappear when we have an Increase Purses
-     * function
+     * This constructor should disappear when we have an Increase Purses function. Maybe we go to smaller functions.
      */
     public Score(int numberOfPlayers) {
         purses = new int[numberOfPlayers];
@@ -19,17 +18,21 @@ public class Score {
         return didPlayerNotWin(currentPlayer);
     }
 
-    public boolean wrongAnswer(String name, int currentPlayer) {
+    public boolean wrongAnswer(@SuppressWarnings("unused") String name, int currentPlayer) {
         System.out.println("Question was incorrectly answered");
         return didPlayerNotWin(currentPlayer);
     }
-    
+
     private boolean didPlayerNotWin(int currentPlayer) {
         boolean didPlayerWin = purses[currentPlayer] == 6;
         return !didPlayerWin;
     }
 
-    /*
-     * Good class, it has symetry
-     */
 }
+
+/*
+ * Good class, it has symmetry.
+ * Discussion of symmetry of similar functions vs. their enclosing scopes:
+ * - Penalty box is of larger scope, cannot be here.
+ * - after renaming this class to Score, it is clear that penalty box is not in Score (but it could have been in Answer).
+ */

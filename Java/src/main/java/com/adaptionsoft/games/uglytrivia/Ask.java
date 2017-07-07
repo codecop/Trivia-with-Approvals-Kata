@@ -43,8 +43,7 @@ public class Ask {
 
 /*
  * By accident we extracted a reasonable class.
- * Maybe better name would be Questions or QuestionsDeck. But that would be violating the rules
+ * Maybe a better name would be Questions or QuestionsDeck. But that would be violating the rules.
  * It is a closure over the question lists.
- *
- * In functional programming this would be named something like CreateAskQuestionFn
+ * In functional programming this would be named something like createAskQuestionFn.
  */

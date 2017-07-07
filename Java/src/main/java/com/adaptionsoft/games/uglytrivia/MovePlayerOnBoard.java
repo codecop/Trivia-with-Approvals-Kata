@@ -58,8 +58,8 @@ public class MovePlayerOnBoard {
 }
 
 /*
- * notice inconsistent naming of class vs. method name.
- * We only have class with one method - how is name meaningful.
+ * Notice the inconsistent naming of class vs. method names.
+ * We only have a class with one method - how is the name meaningful?
  * This is the board. Can we escape our mental image of Objects as state?
- * But this was selected only looking at behaviour.
+ * But this was selected only looking at behaviour. So it must be good.
 */
