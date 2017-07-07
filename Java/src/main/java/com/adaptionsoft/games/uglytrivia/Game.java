@@ -70,7 +70,7 @@ public class Game {
 		} else {
 		
 	        String name = players.get(currentPlayer);
-			winner = answer.corrent(name, currentPlayer);
+			winner = answer.correct(name, currentPlayer);
 			
 		}
         
