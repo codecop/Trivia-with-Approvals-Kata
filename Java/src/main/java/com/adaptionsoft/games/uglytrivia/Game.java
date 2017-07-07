@@ -37,22 +37,25 @@ public class Game {
         System.out.println(players.get(currentPlayer) + " is the current player");
         System.out.println("They have rolled a " + roll);
 
-        handle(players.get(currentPlayer), isLucky, doSomething);
+        // we should use a three state enum here really
+        // this is another verb
+        isGettingOutOfPenaltyBox = allowToPlay(players.get(currentPlayer), isLucky, doSomething);
+        if (isGettingOutOfPenaltyBox) {
+            doSomething.run();
+        }
 
     }
 
-    private void handle(String name, boolean isLucky, Runnable doSomething) {
+    private boolean allowToPlay(String name, boolean isLucky, Runnable doSomething) {
         if (!inPenaltyBox[currentPlayer]) {
-            doSomething.run();
+            return true;
 
         } else if (isLucky) {
             System.out.println(name + " is getting out of the penalty box");
-            isGettingOutOfPenaltyBox = true;
-            doSomething.run();
-
+            return true;
         } else {
             System.out.println(name + " is not getting out of the penalty box");
-            isGettingOutOfPenaltyBox = false;
+            return false;
         }
     }
 
