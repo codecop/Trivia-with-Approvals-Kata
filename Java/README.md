@@ -33,19 +33,19 @@ Immutability is out of scope here. It is difficult. The current code is state ba
 
 ### Notes from extracted classes
 
-* Ask
+* `Ask`
     * By accident we extracted a reasonable class.
     * Maybe a better name would be Questions or QuestionsDeck. But that would be violating the rules.
     * It is a closure over the question lists.
     * In functional programming this would be named something like createAskQuestionFn.
 
-* MovePlayerOnBoard (was Move)
+* `MovePlayerOnBoard` (was `Move`)
      * Notice the inconsistent naming of class vs. method names.
      * We only have a class with one method - how is the name meaningful?
      * This is the board. Can we escape our mental image of Objects as state?
      * But this was selected only looking at behaviour. So it must be good.
 
-* Score (was Answer)
+* `Score` (was `Answer`)
      * The constructor should disappear when we have an Increase Purses function. Maybe we go to smaller functions.
      * Good class, it has symmetry.
      * Discussion of symmetry of similar functions vs. their enclosing scopes:
