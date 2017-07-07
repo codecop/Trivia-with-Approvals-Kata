@@ -16,10 +16,6 @@ public class AnswerQuestion {
         return didPlayerNotWin(currentPlayer);
     }
 
-    public boolean corrent(String name, int currentPlayer) {
-        return correct(name, currentPlayer);
-    }
-
     private boolean didPlayerNotWin(int currentPlayer) {
         boolean didPlayerWin = purses[currentPlayer] == 6;
         return !didPlayerWin;

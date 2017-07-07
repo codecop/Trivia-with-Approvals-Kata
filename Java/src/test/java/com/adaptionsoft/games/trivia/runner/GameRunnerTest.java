@@ -18,6 +18,7 @@ public class GameRunnerTest {
 
     private static final int NUM_TESTS = 25;
 
+
     @Rule
     public CaptureSystemOut stdOut = new CaptureSystemOut();
 
