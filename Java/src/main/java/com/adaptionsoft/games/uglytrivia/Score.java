@@ -1,10 +1,14 @@
 package com.adaptionsoft.games.uglytrivia;
 
-public class AnswerQuestion {
+public class Score {
 
     private final int[] purses;
 
-    public AnswerQuestion(int numberOfPlayers) {
+    /*
+     * this constructor should disappear when we have an Increase Purses
+     * function
+     */
+    public Score(int numberOfPlayers) {
         purses = new int[numberOfPlayers];
     }
 
@@ -25,6 +29,7 @@ public class AnswerQuestion {
         return !didPlayerWin;
     }
 
-    // TODO comment on this class
-    
+    /*
+     * Good class, it has symetry
+     */
 }
