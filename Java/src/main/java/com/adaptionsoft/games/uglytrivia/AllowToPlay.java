@@ -1,5 +1,6 @@
 package com.adaptionsoft.games.uglytrivia;
 
+// TODO review verb with Johan
 public class AllowToPlay {
 
     private final boolean[] inPenaltyBox;
@@ -9,7 +10,7 @@ public class AllowToPlay {
     }
 
     public boolean isAllowed(String name, int currentPlayer, boolean isLucky) {
-        if (!inPenaltyBox[currentPlayer]) {
+        if (!isDenied(currentPlayer)) {
             return true;
 
         } else if (isLucky) {
@@ -22,6 +23,7 @@ public class AllowToPlay {
     }
 
     public boolean isDenied(int currentPlayer) {
+        // TODO maybe introduce smaller/low level function/Verb class: goPenalty which wraps over inPenaltyBox.
         return inPenaltyBox[currentPlayer];
     }
 

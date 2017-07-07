@@ -6,6 +6,7 @@ public class Score {
 
     /*
      * This constructor should disappear when we have an Increase Purses function. Maybe we go to smaller functions.
+     * TODO maybe introduce smaller/low level function/Verb class: increasePurse which wraps over the purses.
      */
     public Score(int numberOfPlayers) {
         purses = new int[numberOfPlayers];
