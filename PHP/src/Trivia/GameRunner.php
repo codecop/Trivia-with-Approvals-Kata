@@ -3,6 +3,7 @@ namespace Trivia;
 
 include __DIR__.'/Game.php';
 
+function play() {
 $notAWinner;
 
   $aGame = new Game();
@@ -26,3 +27,8 @@ $notAWinner;
     
   } while ($notAWinner);
   
+}
+
+if ( basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"]) ) {
+    play();
+}
