@@ -10,7 +10,8 @@
     "autoload": {
         "psr-4": {
             "Trivia\\": "src\/Trivia\/",
-            "PHPUnit\\": "test\/PHPUnit\/"
+            "PHPUnit\\": "test\/PHPUnit\/",
+            "ApprovalTests\\": "test\/ApprovalTests\/"
         }
     },
     "require": {
