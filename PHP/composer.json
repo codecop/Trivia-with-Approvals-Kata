@@ -1,0 +1,21 @@
+{
+    "name": "uglytrivia",
+    "description": "Legacy Code Retreat",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Peter 'Code Cop' Kofler"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Game\\": "src\/Game\/"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.4.*",
+        "mattcan/approval-tests": "dev-master"
+    }
+}
