@@ -10,6 +10,12 @@
 	beStrictAboutTodoAnnotatedTests="true"
 	verbose="true">
 
+	<filter>
+	  <whitelist processUncoveredFilesFromWhitelist="true">
+	    <directory suffix=".php">src</directory>
+	  </whitelist>
+	</filter>
+
 	<testsuites>
 		<testsuite name="All Tests">
 			<directory suffix="_test.php">test</directory>
