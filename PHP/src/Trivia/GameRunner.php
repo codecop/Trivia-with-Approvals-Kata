@@ -1,4 +1,5 @@
 <?php
+namespace Trivia;
 
 include __DIR__.'/Game.php';
 

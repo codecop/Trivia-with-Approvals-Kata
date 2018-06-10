@@ -1,5 +1,5 @@
 <?php
-namespace Game;
+namespace Trivia;
 
 class SamplePhpUnitTest extends \PHPUnit_Framework_TestCase {
 

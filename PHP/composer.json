@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Game\\": "src\/Game\/"
+            "Trivia\\": "src\/Trivia\/"
         }
     },
     "require": {
