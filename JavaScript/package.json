@@ -8,7 +8,7 @@
   },
   "author": "Peter 'Code Cop' Kofler",
   "license": "GPL-3.0",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
   "dependencies": {},
   "devDependencies": {
     "jasmine-node": "1.14.5",
