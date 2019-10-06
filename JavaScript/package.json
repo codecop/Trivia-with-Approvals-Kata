@@ -1,10 +1,10 @@
 {
-  "name": "uglytrivia",
+  "name": "trivia-with-approvals-kata",
   "description": "Legacy Code Retreat",
   "version": "0.0.1",
   "repository": {
-    "type": "hg",
-    "url": "https://bitbucket.org/pkofler/ugly-trivia-with-approvals-js-setup"
+    "type": "git",
+    "url": "https://github.com/codecop/Trivia-with-Approvals-Kata"
   },
   "author": "Peter 'Code Cop' Kofler",
   "license": "GPL-3.0",
