@@ -1,0 +1,15 @@
+syntax: glob
+
+node_modules/
+npm-debug.log
+coverage
+
+*.received.*
+
+.project
+.settings
+.classpath
+
+.idea
+*.iml
+*.iwr
