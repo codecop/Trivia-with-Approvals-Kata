@@ -1,0 +1,24 @@
+{
+  "name": "uglytrivia",
+  "description": "Legacy Code Retreat",
+  "version": "0.0.1",
+  "repository": {
+    "type": "hg",
+    "url": "https://bitbucket.org/pkofler/ugly-trivia-with-approvals-js-setup"
+  },
+  "author": "Peter 'Code Cop' Kofler",
+  "license": "GPL-3.0",
+  "readmeFilename": "README.md",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-node": "1.14.5",
+    "chai": "3.5.0",
+    "approvals": "1.3.0",
+    "istanbul": "0.4.5",
+    "jslint": "0.10.3",
+    "jshint": "2.9.4"
+  },
+  "scripts": {
+    "test": "jasmine-node test"
+  }
+}
