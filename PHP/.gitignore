@@ -1,6 +1,3 @@
-
-syntax: glob
-
 composer.bat
 composer.phar
 vendor/
