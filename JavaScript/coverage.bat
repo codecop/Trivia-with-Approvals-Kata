@@ -1,1 +1,1 @@
-@call node_modules\.bin\istanbul cover node_modules\jasmine-node\bin\jasmine-node test
+@call node_modules\.bin\nyc -r text -r html node_modules\mocha\bin\mocha test --recursive

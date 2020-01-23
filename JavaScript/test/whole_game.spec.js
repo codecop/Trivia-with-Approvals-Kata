@@ -2,7 +2,9 @@
 'use strict';
 
 require('../src/game.js');
-require('approvals').jasmine();
+var chai = require('chai');
+var expect = chai.expect;
+require('approvals').mocha();
 
 var KDiff3Reporter = require('./approvals/Reporters/kdiff3Reporter.js');
 var approvalConfig = {
@@ -30,8 +32,8 @@ describe("whole game", function() {
   });
 
   it("should access game", function() {
-    expect(Game).toBeDefined();
-    expect(randomizedGame).toBeDefined();
+    expect(Game).to.exist;
+    expect(randomizedGame).to.exist;
   });
 
   it("plays Trivia", function() {
