@@ -1,12 +1,12 @@
-target
+target/
 
 .project
-.settings
+.settings/
 .classpath
 .checkstyle
 .pmd
 
-.idea
+.idea/
 *.iml
 *.iwr
 
