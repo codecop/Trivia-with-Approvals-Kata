@@ -1,7 +1,7 @@
 {
-  "name": "trivia-with-approvals-kata",
+  "name": "uglytrivia-with-approvals-kata",
   "description": "Legacy Code Retreat",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/codecop/Trivia-with-Approvals-Kata"
