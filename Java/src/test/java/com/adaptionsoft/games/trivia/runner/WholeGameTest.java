@@ -14,7 +14,7 @@ import org.junit.Test;
 
 // no JunitReporter.class because diff is large
 @UseReporter(value = { KDiff3Reporter.class, ClipboardReporter.class, QuietReporter.class })
-public class GameRunnerTest {
+public class WholeGameTest {
 
     private static final int NUM_TESTS = 25;
 
