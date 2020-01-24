@@ -1,16 +1,14 @@
 package com.adaptionsoft.games.trivia.runner
 
 import com.adaptionsoft.games.uglytrivia.Game
-import com.adaptionsoft.games.uglytrivia.Logger
 import java.util.*
 
 object GameRunner {
     var notAWinner: Boolean = false
-    val logger = Logger()
 }
 
 fun main(args: Array<String>) {
-    val aGame = Game(GameRunner.logger)
+    val aGame = Game()
 
     aGame.add("Chet")
     aGame.add("Pat")
