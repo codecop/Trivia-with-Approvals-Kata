@@ -1,4 +1,18 @@
+# Gradle
 out
 build
-.idea
 .gradle
+
+# IDEA
+.idea/
+*.iml
+*.iwr
+
+# Eclipse
+.project
+.settings/
+.classpath
+.checkstyle
+.pmd
+
+*.received.*
