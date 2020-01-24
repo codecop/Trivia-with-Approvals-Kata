@@ -3,7 +3,7 @@ package com.adaptionsoft.games.trivia
 import com.adaptionsoft.games.trivia.runner.GameRunner
 import com.adaptionsoft.games.trivia.runner.main
 import org.approvaltests.Approvals
-import org.junit.jupiter.api.Test
+import org.junit.Test
 
 class GoldenMasterTest {
 
