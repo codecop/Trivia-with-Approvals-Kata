@@ -6,12 +6,12 @@ include(__DIR__.'/../../src/Trivia/GameRunner.php');
 use PHPUnit\Framework\TestCase;
 use ApprovalTests\Approvals;
 
-class GameRunnerTest extends TestCase {
+class WholeGameTest extends TestCase {
 
     /**
      * @test
      */
-    public function runs_whole_game()
+    public function plays_trivia()
     {
         $numTests = 25;
         srand(0);
