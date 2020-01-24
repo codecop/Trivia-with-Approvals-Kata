@@ -18,4 +18,6 @@ composer.lock
 *.iml
 *.iwr
 
+# PHPUnit
 coverage
+.phpunit.result.cache

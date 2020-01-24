@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.4/phpunit.xsd"
+	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/8.5/phpunit.xsd"
 	backupGlobals="false"
 	bootstrap="vendor/autoload.php"
 	colors="true"
-	beStrictAboutTestsThatDoNotTestAnything="true"
+	beStrictAboutChangesToGlobalState="true"
 	beStrictAboutOutputDuringTests="true"
-	beStrictAboutTestSize="true"
+	beStrictAboutResourceUsageDuringSmallTests="true"
+	beStrictAboutTestsThatDoNotTestAnything="true"
 	beStrictAboutTodoAnnotatedTests="true"
+	beStrictAboutCoversAnnotation="true"
 	verbose="true">
 
 	<filter>

@@ -1,5 +1,5 @@
 {
-    "name": "trivia-with-approvals-kata",
+    "name": "codecop/uglytrivia-with-approvals-kata",
     "description": "Legacy Code Retreat",
     "license": "GPL-3.0",
     "authors": [
@@ -10,14 +10,14 @@
     "autoload": {
         "psr-4": {
             "Trivia\\": "src\/Trivia\/",
-            "PHPUnit\\": "test\/PHPUnit\/",
             "ApprovalTests\\": "test\/ApprovalTests\/"
         }
     },
     "require": {
     },
     "require-dev": {
-        "phpunit/phpunit": "5.4.*",
-        "mattcan/approval-tests": "dev-master"
+        "phpunit/phpunit": "8.5.*",
+        "mockery/mockery": "1.3.*",
+        "approvals/approval-tests": "1.4.*"
     }
 }

@@ -1,7 +1,9 @@
 <?php
 namespace Trivia;
 
-class SamplePhpUnitTest extends \PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
+
+class SamplePhpUnitTest extends TestCase {
 
     /** @test */
     function testAddition() {

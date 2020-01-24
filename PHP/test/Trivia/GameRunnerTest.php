@@ -3,15 +3,10 @@ namespace Trivia;
 
 include(__DIR__.'/../../src/Trivia/GameRunner.php');
 
+use PHPUnit\Framework\TestCase;
 use ApprovalTests\Approvals;
-// use ApprovalTests\Reporters\KDiff3Reporter;
 
-class GameRunnerTest extends \PHPUnit_Framework_TestCase {
-
-    public static function setUpBeforeClass()
-    {
-        // Approvals::useReporter(new KDiff3Reporter());
-    }
+class GameRunnerTest extends TestCase {
 
     /**
      * @test
