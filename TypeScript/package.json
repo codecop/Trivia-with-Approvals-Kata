@@ -1,11 +1,16 @@
 {
-  "name": "trivia",
+  "name": "uglytrivia-with-approvals-kata",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codecop/Trivia-with-Approvals-Kata"
+  },
   "description": "Trivia kata in typescript",
   "main": "src/game-runner.ts",
   "scripts": {
     "start": "ts-node src/game-runner.ts",
-    "test": "nyc mocha --recursive --require ts-node/register \"tests/**/*.test.ts\""
+    "test": "mocha --recursive --require ts-node/register \"tests/**/*.test.ts\"",
+    "lint": "tslint \"src/**/*.ts\""
   },
   "nyc": {
     "include": [
@@ -28,14 +33,19 @@
   },
   "author": "Felix Blechschmitt",
   "license": "GPL-3.0",
-  "dependencies": {
-    "typescript": "^2.9.2"
-  },
+  "readmeFilename": "README.md",
+  "dependencies": {},
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
+    "@types/chai": "4.1.4",
+    "@types/mocha": "5.2.5",
+    "@types/node": "10.11.2",
+    "approvals": "3.0.5",
+    "chai": "4.2.0",
+    "mocha": "6.2.2",
     "nyc": "^12.0.2",
     "sinon": "^6.1.3",
-    "ts-node": "^7.0.0"
+    "ts-node": "^7.0.1",
+    "tslint": "5.8.0",
+    "typescript": "^3.0.3"
   }
 }
