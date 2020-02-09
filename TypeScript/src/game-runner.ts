@@ -1,7 +1,7 @@
-import {Game} from './game';
+import { Game } from './game';
 
 export class GameRunner {
-    public static main(): void {
+    public static main(random): void {
         const game = new Game();
         game.add("Chet");
         game.add("Pat");
@@ -10,18 +10,16 @@ export class GameRunner {
         let notAWinner;
         do {
 
-            game.roll(Math.floor(Math.random() * 6) + 1);
-        
-            if (Math.floor(Math.random() * 10) == 7) {
-            notAWinner = game.wrongAnswer();
+            game.roll(Math.floor(random() * 6) + 1);
+
+            if (Math.floor(random() * 10) == 7) {
+                notAWinner = game.wrongAnswer();
             } else {
-            notAWinner = game.wasCorrectlyAnswered();
+                notAWinner = game.wasCorrectlyAnswered();
             }
-        
+
         } while (notAWinner);
     }
 }
 
-GameRunner.main();
-
-  
+GameRunner.main(Math.random);
