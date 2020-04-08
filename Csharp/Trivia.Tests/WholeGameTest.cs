@@ -25,5 +25,4 @@ namespace Trivia.Tests
             Approvals.Verify(output);
         }
     }
-
 }

@@ -17,5 +17,4 @@ namespace Sample.Tests
             Approvals.VerifyAll(names, label: "");
         }
     }
-
 }
