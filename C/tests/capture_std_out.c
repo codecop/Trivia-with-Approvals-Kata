@@ -1,7 +1,6 @@
 #include <stdio.h>  /* printf  */
 #include <string.h> /* memset  */
 
-static FILE __original;
 static char *__fileName;
 static FILE *__captured;
 static long __startPos;
@@ -14,7 +13,6 @@ capture_std_out (void **state)
 {
   (void)state; /* unused */
 
-  __original = *stdout;
   __fileName = tmpnam (NULL);
   __captured = freopen (__fileName, "wb+", stdout);
   __startPos = 0;

@@ -27,7 +27,7 @@ int
 main (void)
 {
   const struct CMUnitTest test_suite[] = {
-      cmocka_unit_test_setup_teardown (test_plays_trivia, capture_std_out, reset_std_out), /* */
+    cmocka_unit_test_setup_teardown (test_plays_trivia, capture_std_out, reset_std_out), /* */
   };
 
   return cmocka_run_group_tests (test_suite, NULL, NULL);
