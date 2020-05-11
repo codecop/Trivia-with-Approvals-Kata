@@ -74,6 +74,17 @@ game_is_playable (struct Game *game)
   return (game_how_many_players (game) >= 2);
 }
 
+/* not C99, only POSIX */
+char *
+strdup (const char *src)
+{
+  char *dst = malloc (strlen (src) + 1);
+  if (dst == NULL)
+    return NULL;
+  strcpy (dst, src);
+  return dst;
+}
+
 bool
 game_add (struct Game * game, const char *player_name)
 {
