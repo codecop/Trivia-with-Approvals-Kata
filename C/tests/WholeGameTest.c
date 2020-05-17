@@ -4,8 +4,8 @@
 
 #include "../game_runner.c"
 #include "capture_std_out.c"
-#include <approvals_cmocka.h>
-#include <cmocka.h>
+#include <approvals_cmocka.h> /* see https://github.com/codecop/ApprovalTests.c */
+#include <cmocka.h>           /* see https://cmocka.org/ */
 
 #define NUM_TESTS 25
 
