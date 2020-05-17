@@ -20,7 +20,7 @@ test_plays_trivia (void **state)
     run (seed);
   }
 
-  verify_txt (get_std_out (), "test_plays_trivia");
+  verify_txt (get_std_out ());
 }
 
 int
